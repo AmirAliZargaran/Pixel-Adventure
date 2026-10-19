@@ -76,7 +76,7 @@ public class BeeBullet : MonoBehaviour
         }
 
         // برخورد به زمین یا موانع
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.CompareTag("Ground"))
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             Hit();
         }

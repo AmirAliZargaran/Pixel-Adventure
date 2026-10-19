@@ -2142,7 +2142,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1141132855
+  m_SortingLayerID: 2106222751
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1164114229, guid: 53aa698e6c1b3d44f92fc604df3ca33c, type: 3}
@@ -2443,7 +2443,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -49479887
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -6792,7 +6792,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -49479887
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c538734e0f0fea243a1f5ee60e31a48f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8085,6 +8085,18 @@ PrefabInstance:
     - target: {fileID: 7159238279414907180, guid: 832ece6bccaf6cb42b938616ca358221, type: 3}
       propertyPath: m_Name
       value: 'BeeBoss '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159238279414907180, guid: 832ece6bccaf6cb42b938616ca358221, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159238279414907182, guid: 832ece6bccaf6cb42b938616ca358221, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7159238279414907182, guid: 832ece6bccaf6cb42b938616ca358221, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1508776149
       objectReference: {fileID: 0}
     - target: {fileID: 7159238279414907183, guid: 832ece6bccaf6cb42b938616ca358221, type: 3}
       propertyPath: m_RootOrder
