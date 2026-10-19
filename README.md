@@ -52,7 +52,7 @@ The scripts from this project are also used as a base in my other project, **Bug
 ## ⚙️ Setup & Installation
 To run and inspect the project in the Unity Editor, first clone the repository:
 
-`git clone https://github.com/AmirAliZargaran/Pixel-Adventure.git` *(یا لینکی که برای همین ریپازیتوری داری)*
+`git clone https://github.com/AmirAliZargaran/Pixel-Adventure.git` 
 
 Then follow these steps:
 - Open **Unity Hub**.
