@@ -11,7 +11,7 @@ public class AbilityManager : MonoBehaviour
     {
         { AbilityType.Dash,       true },
         { AbilityType.DoubleJump, true },
-        { AbilityType.HoldJump,   true },
+        { AbilityType.HoldJump,   false },
         { AbilityType.FastFall,   true },
     };
 

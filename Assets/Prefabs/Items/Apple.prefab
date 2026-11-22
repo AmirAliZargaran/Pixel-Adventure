@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1140338971
-  m_SortingLayer: 3
+  m_SortingLayerID: 1383759379
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -877097054, guid: 22413e51de0097542ae381ce7ba0021c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -169,4 +169,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 4602308868723175691, guid: d9cff720b5de9904c8e3e44759fdc225, type: 3}
   collectSound: {fileID: 8300000, guid: fe61d6490af57f7418424a6761b6340d, type: 3}
+  itemId: coin_1
   scoreValue: 1

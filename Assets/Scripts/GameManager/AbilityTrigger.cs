@@ -23,8 +23,12 @@ public class AbilityTrigger : MonoBehaviour
 
         TutorialUI.Show(tutorialMessage);
 
-        if (abilityType == AbilityType.None)
+        if(abilityType == AbilityType.None)
+        {
+
+            hasUnlocked = true;
             return;
+        }
 
         AbilityManager.Unlock(abilityType);
         hasUnlocked = true;
