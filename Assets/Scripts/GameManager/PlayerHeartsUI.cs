@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerHeartsUI : MonoBehaviour
 {
@@ -93,5 +94,11 @@ public class PlayerHeartsUI : MonoBehaviour
                 heartImages[i].sprite = emptyHeart;
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        if(playerHealth == null)
+            playerHealth = FindObjectOfType<PlayerHealth>();
     }
 }

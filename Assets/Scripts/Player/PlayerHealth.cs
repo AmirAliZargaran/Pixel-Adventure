@@ -75,6 +75,8 @@ public class PlayerHealth : MonoBehaviour
     public void Reset()
     {
         CurrentHealth = maxHealth;
+        IsInvincible = false;
+        OnHealthChanged?.Invoke(CurrentHealth);
     }
 
     private IEnumerator InvincibilityRoutine()
