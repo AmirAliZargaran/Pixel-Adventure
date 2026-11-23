@@ -6,6 +6,9 @@ public class Apple : Item
     [Tooltip("امتیازی که با گرفتن این آیتم می‌گیرد")]
     [SerializeField] private int scoreValue = 1;
 
+    public int ScoreValue => scoreValue;
+
+
     private void Awake()
     {
         // اگر از قبل توی این بازی جمع شده بود، اصلاً در صحنه ظاهر نشود

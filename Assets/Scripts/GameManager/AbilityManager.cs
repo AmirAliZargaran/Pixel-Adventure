@@ -9,10 +9,10 @@ public class AbilityManager : MonoBehaviour
     // وضعیت پیش‌فرض توانایی‌ها
     public static readonly Dictionary<AbilityType, bool> Unlocked = new()
     {
-        { AbilityType.Dash,       true },
-        { AbilityType.DoubleJump, true },
+        { AbilityType.Dash,       false },
+        { AbilityType.DoubleJump, false },
         { AbilityType.HoldJump,   false },
-        { AbilityType.FastFall,   true },
+        { AbilityType.FastFall,   false },
     };
 
     public static void Unlock(AbilityType ability)
