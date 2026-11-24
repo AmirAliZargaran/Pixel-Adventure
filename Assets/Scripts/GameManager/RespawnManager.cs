@@ -67,7 +67,7 @@ public class RespawnManager : MonoBehaviour
 
         Vector2 respawnPoint = SaveManager.Instance != null
             ? SaveManager.Instance.GetRespawnPoint()
-            : playerTransform.position;
+            : (Vector2)playerTransform.position;
 
         // پلیر هنوز غیرفعال است؛ ابتدا موقعیت و فیزیک را ریست کن.
         playerRb.velocity = Vector2.zero;
@@ -93,24 +93,57 @@ public class RespawnManager : MonoBehaviour
 
     private bool ResolvePlayerReferences()
     {
+        // اگر رفرنس‌ها سالم و معتبرند، نیازی به جستجو نیست
         if(playerTransform != null &&
-            playerRb != null &&
-            playerHealth != null)
+           playerRb != null &&
+           playerHealth != null)
         {
             return true;
         }
 
+        // ۱. تلاش برای پیدا کردن PlayerHealth حتی اگر پلیر غیرفعال (Inactive) باشد
+        PlayerHealth health = Resources.FindObjectsOfTypeAll<PlayerHealth>()
+            .FirstOrDefault(h => h.gameObject.scene.isLoaded && h.CompareTag("Player"));
+
+        // اگر با متد بالا پیدا نشد، از روش عمومی با includeInactive استفاده می‌کنیم
+        if(health == null)
+        {
+            health = FindObjectsOfType<PlayerHealth>(true)
+                .FirstOrDefault(h => h.CompareTag("Player"));
+        }
+
+        if(health != null)
+        {
+            playerHealth = health;
+            playerTransform = health.transform;
+            playerRb = health.GetComponent<Rigidbody2D>();
+
+            return playerTransform != null &&
+                   playerRb != null &&
+                   playerHealth != null;
+        }
+
+        // ۲. پشتیبان: اگر پلیر تگ پلیر داشت و هنوز فعال بود
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if(playerObject != null)
+        {
+            playerTransform = playerObject.transform;
+            playerRb = playerObject.GetComponent<Rigidbody2D>();
+            playerHealth = playerObject.GetComponent<PlayerHealth>();
 
-        if(playerObject == null)
-            return false;
+            return playerTransform != null &&
+                   playerRb != null &&
+                   playerHealth != null;
+        }
 
-        playerTransform = playerObject.transform;
-        playerRb = playerObject.GetComponent<Rigidbody2D>();
-        playerHealth = playerObject.GetComponent<PlayerHealth>();
+        return false;
+    }
 
-        return playerTransform != null &&
-               playerRb != null &&
-               playerHealth != null;
+    private void OnDestroy()
+    {
+        if(_instance == this)
+        {
+            _instance = null;
+        }
     }
 }

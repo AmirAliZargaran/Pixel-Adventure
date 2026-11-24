@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// اضافه شدن گزینه None برای آموزش‌های عمومی بدون نیاز به Unlock
-public enum AbilityType { None, Dash, DoubleJump, HoldJump, FastFall }
+public enum AbilityType
+{
+    None, Dash, DoubleJump, HoldJump, FastFall
+}
 
 public class AbilityManager : MonoBehaviour
 {
-    // وضعیت پیش‌فرض توانایی‌ها
+    // وضعیت توانایی‌ها
     public static readonly Dictionary<AbilityType, bool> Unlocked = new()
     {
         { AbilityType.Dash,       false },
@@ -17,18 +19,28 @@ public class AbilityManager : MonoBehaviour
 
     public static void Unlock(AbilityType ability)
     {
-        // اگر نوع توانایی None بود، نیازی به ثبت قفل‌گشایی نیست و فقط آموزش نشان داده می‌شود
-        if (ability == AbilityType.None)
+        if(ability == AbilityType.None)
             return;
 
-        // اگر از قبل باز شده بود، دیگر نیازی به اجرای مجدد افکت‌ها نیست
-        if (Unlocked[ability])
+        if(Unlocked[ability])
             return;
 
         Unlocked[ability] = true;
 
-        // SoundManager.Instance.PlaySound(unlockSound);
+        // SoundManager.Instance?.PlaySound(unlockSound);
     }
 
-    public static bool IsUnlocked(AbilityType ability) => Unlocked[ability];
+    public static bool IsUnlocked(AbilityType ability) => Unlocked.ContainsKey(ability) && Unlocked[ability];
+
+    /// <summary>
+    /// این متد وضعیت تمام ابیلیتی‌ها را به حالت قفل برمی‌گرداند.
+    /// می‌توانید در Start بازی، متد Retry در GameManager یا هنگام ورود به صحنه منو فراخوانی کنید.
+    /// </summary>
+    public static void ResetAbilities()
+    {
+        Unlocked[AbilityType.Dash] = false;
+        Unlocked[AbilityType.DoubleJump] = false;
+        Unlocked[AbilityType.HoldJump] = false;
+        Unlocked[AbilityType.FastFall] = false;
+    }
 }

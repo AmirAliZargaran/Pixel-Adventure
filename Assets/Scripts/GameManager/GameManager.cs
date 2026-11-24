@@ -225,6 +225,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        AbilityManager.ResetAbilities();
+
         int nextSceneIndex =
             SceneManager.GetActiveScene().buildIndex + 1;
 
@@ -241,6 +243,8 @@ public class GameManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
+        AbilityManager.ResetAbilities();
+
         SceneManager.LoadScene(mainMenuSceneName);
     }
 }
