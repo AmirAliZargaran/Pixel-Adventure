@@ -180,8 +180,19 @@ public class GameManager : MonoBehaviour
         // منطق فعلی مرگ بازیکن را تغییر نمی‌دهیم.
     }
 
+    public void WinFromBoss()
+    {
+        if(gameEnded)
+            return;
+
+        WinGame();
+    }
+
+
     private void WinGame()
     {
+        if(gameEnded)
+            return;
         gameEnded = true;
 
         if(musicObject != null)

@@ -96,6 +96,7 @@ public class BeeController : MonoBehaviour
     private float stateTimer;
     private bool isFacingRight = false;
     private float originalScaleX;
+    private bool isActivated = false;
 
     // جلوگیری از شلیک دوباره در یک سیکل انیمیشن
     private bool shotFiredThisCycle;
@@ -125,13 +126,13 @@ public class BeeController : MonoBehaviour
 
     private void Update()
     {
-        if(CurrentState == BeeState.Dead)
+        if(!isActivated || CurrentState == BeeState.Dead)
             return;
 
         // چرخش جهت نگاه زنبور به سمت بازیکن در حالات غیر حمله
         if(CurrentState == BeeState.Wander ||
             CurrentState == BeeState.DiveTelegraph ||
-            CurrentState == BeeState.BombingPositioning)
+            CurrentState == BeeState.BombingPositioning || CurrentState == BeeState.Wander)
         {
             LookAtPlayer();
         }
@@ -404,6 +405,13 @@ public class BeeController : MonoBehaviour
         if(col != null)
             col.enabled = false;
     }
+
+    public void ActivateBoss()
+    {
+        isActivated = true;
+        PickNewWanderTarget();
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
