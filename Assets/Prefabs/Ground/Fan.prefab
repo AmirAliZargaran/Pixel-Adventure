@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -49479887
-  m_SortingLayer: 1
+  m_SortingLayerID: 1845171767
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -355146762, guid: 2d71e272b4fab6b4b9ff775ab870f00a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4959,7 +4959,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -49479887
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_RenderMode: 0
   m_MeshDistribution: 0
