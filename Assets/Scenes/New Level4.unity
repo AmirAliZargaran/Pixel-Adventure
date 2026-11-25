@@ -9465,7 +9465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1297179348301517166, guid: 789433b8dfcf6914b93a5f980c77b03b, type: 3}
       propertyPath: speed
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1297179348301517166, guid: 789433b8dfcf6914b93a5f980c77b03b, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -54802,6 +54802,14 @@ PrefabInstance:
     - target: {fileID: 3726120240544594125, guid: 330ec07781fa2e846b11fbc194abd010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3726120240544594126, guid: 330ec07781fa2e846b11fbc194abd010, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3726120240544594127, guid: 330ec07781fa2e846b11fbc194abd010, type: 3}
+      propertyPath: maxHealth
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

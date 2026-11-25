@@ -163,7 +163,8 @@ public class PlayerController : MonoBehaviour
     private void DashControl()
     {
         if (
-            Input.GetKeyDown(KeyCode.LeftShift) 
+            (Input.GetKeyDown(KeyCode.LeftShift) ||
+         Input.GetKeyDown(KeyCode.RightShift))
             && canDash 
             && !isDashing 
             && !IsWinning 

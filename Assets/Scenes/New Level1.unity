@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityType: 0
-  tutorialMessage: Good Jub!
+  tutorialMessage: Good Job!
   destroyTriggerAfterUnlock: 0
 --- !u!61 &27998105
 BoxCollider2D:

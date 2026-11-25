@@ -1,63 +1,66 @@
 # Pixel Adventure
 
-> **Pixel Adventure** is my first stepping stone into the world of game development. Built using free Kenney assets along with free sound effects and soundtracks, this project helped me learn core Unity mechanics, animation systems, and particle effects (with plenty of helpful guidance from AI along the way!).
+> **Pixel Adventure** is a completed 2D platformer and my first stepping stone into game development. Built using free Kenney assets, sound effects, and soundtracks, this project showcases core Unity mechanics, animation handling, and particle systems (developed with helpful guidance from AI).
+
+---
+
+## 🎮 Game Highlights
+- **5 Playable Levels:** A complete progression with increasing platforming challenges.
+- **Start Menu & Level Selection:** Fully implemented UI to navigate between levels.
+- **Boss Fight:** Features a dedicated BeeBoss encounter with unique attack patterns.
+- **Standalone Build Available:** Ready-to-play builds can be downloaded directly from the [Releases](https://github.com/AmirAliZargaran/Pixel-Adventure/releases) section.
 
 ---
 
 ## 🕹️ Core Player Mechanics
-Implementing these mechanics was an exciting introduction to game development logic:
-- **Movement:** A, D
-- **Jump:** W
-- **Double Jump:** W
-- **Hold Jump:** W
+- **Movement:** A / D
+- **Jump / Double Jump / Hold Jump:** W
 - **Dash:** Shift
 - **Fast Fall:** S
 
 ---
 
 ## 🧱 Traps & Interactive Platforms
-- **Moving Platforms:** Supports any direction using multiple path points, featuring two modes (Ping-Pong and One-Way).
+- **Moving Platforms:** Supports any direction using multiple waypoints (Ping-Pong & One-Way modes).
 - **Fans & Saws**
 - **Seesaws**
-- **Falling Platforms:** Functions similarly to moving platforms with custom sprites.
+- **Falling Platforms**
 - **Spikes**
 
 ---
 
 ## 👾 Enemies & Boss Fights
 - **NPC Enemies:** Mushroom
-- **Boss Fight (BeeBoss):** Added later to master advanced control and state logic. The BeeBoss features two different attack patterns, and players can damage it using the **Dash** ability during its normal or stun states.
+- **Boss Fight (BeeBoss):** Features two distinct attack patterns. Players can damage the boss using the **Dash** ability during its normal or stunned states.
 
 ---
 
 ## 🎨 Environment & UX Systems
-Building the game environment was just as fun as the mechanics. Afterward, I integrated several User Experience (UX) and level design features:
-- **Camera Zones:** Dynamic camera framing that adjusts relative to the player's current stage/zone.
-- **Player Guides:** Contextual text prompts shown in specific zones, which can also trigger ability unlocks.
-- **Ability Unlock System**
+- **Camera Zones:** Dynamic camera framing that adjusts relative to player location and level design.
+- **Player Guides:** In-game contextual tutorial prompts shown in specific zones.
+- **Ability Unlock System:** Progression gates that unlock abilities as you advance.
 
 ---
 
-## 🚧 Current Status
-- **Recent Progress:** Implemented a Start Menu and Level Select screen (currently a work in progress / under development).
-The project has recently been transferred to a new location, so some parts may currently be broken or temporary. This is expected while the migration is being finalized.
-
----
-
-## 🔄 Legacy & Reuse
-The scripts from this project are also used as a base in my other project, **Bug Scape** (more details are covered in that project's README). As a result, this repository may contain some legacy or unrelated scripts while active development continues.
+## 🔄 Legacy & Code Reuse
+Scripts from this project also served as the architectural foundation for my ongoing project, **Bug Scape**.
 
 ---
 
 ## ⚙️ Setup & Installation
+
+### Option 1: Play the Game (No Unity required)
+Download the latest pre-built game executable from the **Releases** tab on this repository, extract the archive, and run the `.exe` file.
+
+### Option 2: Inspect Source Code in Unity Editor
 To run and inspect the project in the Unity Editor, first clone the repository:
 
-`git clone https://github.com/AmirAliZargaran/Pixel-Adventure.git` 
+`git clone https://github.com/AmirAliZargaran/Pixel-Adventure.git`
 
 Then follow these steps:
 - Open **Unity Hub**.
 - Click on **Add** and select the root folder of this cloned project.
-- Launch the project using **Unity 2022.1.24f1**.
+- Launch the project using your Unity version.
 
 ---
 

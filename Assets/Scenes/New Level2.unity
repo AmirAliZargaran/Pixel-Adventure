@@ -263,6 +263,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abyss
       objectReference: {fileID: 0}
+    - target: {fileID: 2667151874106474558, guid: 0c5eeca878a020a4f82300074afed6b1, type: 3}
+      propertyPath: m_Size.x
+      value: 201.63968
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667151874106474558, guid: 0c5eeca878a020a4f82300074afed6b1, type: 3}
+      propertyPath: m_Offset.x
+      value: 26.875965
+      objectReference: {fileID: 0}
     - target: {fileID: 2667151874106474559, guid: 0c5eeca878a020a4f82300074afed6b1, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -843,6 +851,10 @@ PrefabInstance:
     - target: {fileID: 3726120240544594125, guid: 330ec07781fa2e846b11fbc194abd010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3726120240544594127, guid: 330ec07781fa2e846b11fbc194abd010, type: 3}
+      propertyPath: maxHealth
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

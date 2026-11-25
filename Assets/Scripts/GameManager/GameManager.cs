@@ -185,7 +185,25 @@ public class GameManager : MonoBehaviour
         if(gameEnded)
             return;
 
-        WinGame();
+        gameEnded = true;
+
+        if(musicObject != null)
+            musicObject.SetActive(false);
+
+        if(playerController != null)
+            playerController.FreezePlayer();
+
+        if(levelCompleteUI == null)
+        {
+            Debug.LogError("LevelCompleteUI در GameManager تنظیم نشده است.");
+
+            if(winPanel != null)
+                winPanel.SetActive(true);
+
+            return;
+        }
+
+        levelCompleteUI.ShowBossResult(score, maximumScore, 0);
     }
 
 

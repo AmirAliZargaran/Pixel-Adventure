@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class LevelCompleteUI : MonoBehaviour
 {
+    [Header("UI Layouts")]
+    [SerializeField] private GameObject levelsUI;
+    [SerializeField] private GameObject bossUI;
+
     [Header("Texts")]
     [SerializeField] private TextMeshProUGUI levelTitleText;
     [SerializeField] private TextMeshProUGUI scoreLabel;
@@ -24,10 +28,42 @@ public class LevelCompleteUI : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button nextButton;
 
+    /// <summary>
+    /// برای مرحله‌های عادی استفاده شود.
+    /// </summary>
     public void ShowResult(int score, int maximumScore, int levelNumber, bool hasNextLevel)
     {
+        ShowResultInternal(score, maximumScore, levelNumber, hasNextLevel, false);
+    }
+
+    /// <summary>
+    /// برای مرحله باس استفاده شود.
+    /// </summary>
+    public void ShowBossResult(int score, int maximumScore, int levelNumber)
+    {
+        ShowResultInternal(score, maximumScore, levelNumber, false, true);
+    }
+
+    private void ShowResultInternal(
+        int score,
+        int maximumScore,
+        int levelNumber,
+        bool hasNextLevel,
+        bool isBossLevel)
+    {
+        // فقط چیدمان مربوط به نوع مرحله را فعال می‌کنیم.
+        if(levelsUI != null)
+            levelsUI.SetActive(!isBossLevel);
+
+        if(bossUI != null)
+            bossUI.SetActive(isBossLevel);
+
         if(levelTitleText != null)
-            levelTitleText.text = "Level " + levelNumber;
+        {
+            levelTitleText.text = isBossLevel
+                ? "Boss Defeated"
+                : "Level " + levelNumber;
+        }
 
         if(scoreLabel != null)
             scoreLabel.text = "Score";
